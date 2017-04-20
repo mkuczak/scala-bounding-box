@@ -1,7 +1,5 @@
 package edu.luc.cs.laufer.cs372.shapes
 
-// TODO: implement this behavior
-
 object boundingBox {
   def apply(s: Shape): Location = s match {
     case Rectangle(w, h) => Location(0, 0, Rectangle(w, h))
@@ -16,8 +14,6 @@ object boundingBox {
       val yMin = boundingBoxes.map(bBox => bBox.y).min
       val xMax = boundingBoxes.map {
         case Location(x, y, Rectangle(w, h)) => x + w
-        //case Group(shapes) => call itself?
-        //I don't know how to do that because I can't do apply Group because this group doesn't have a name
       }.max
       val yMax = boundingBoxes.map {
         case Location(x, y, Rectangle(w, h)) => y + h

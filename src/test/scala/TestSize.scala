@@ -32,8 +32,23 @@ class TestHeight extends FunSuite {
 
 //  testHeight("simple ellipse", simpleEllipse, 1)
 //  testHeight("simple rectangle", simpleRectangle, 1)
-//  testHeight("simple location", simpleLocation, 1)
+//  testHeight("simple location", simpleLocation, 2)
 //  testHeight("basic group", basicGroup, 2)
 //  testHeight("simple group", simpleGroup, 3)
 //  testHeight("complex group", complexGroup, 7)
+}
+
+class TestScale extends FunSuite {
+  def testScale(description: String, s: Shape, factor: Int, ss: Shape) = {
+    test(description) {
+      val shape = scale(s, factor)
+      assert(shape === ss)
+    }
+  }
+  testScale("simple rectangle", simpleRectangle, 2, simpleRectangleScaled)
+  testScale("simple ellipse", simpleEllipse, 5, simpleEllipseScaled)
+  testScale("simple location", simpleLocation, 3, simpleLocationScaled)
+  testScale("basic group", basicGroup, 3, basicGroupScaled)
+  testScale("simple group", simpleGroup, 2, simpleGroupScaled)
+  testScale("complex group", complexGroup, 2, complexGroupScaled)
 }

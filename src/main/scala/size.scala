@@ -18,10 +18,9 @@ object height {
     case Rectangle(w, h) => 1
     case Ellipse(r1, r2) => 1
     case Location(x, y, shape) => height(shape) + 1
-    case Group(shapes @ _*) => shapes.foldLeft {
-      0
-    } { case (sum, next) => (sum + height(next)) //height should return only the max height, not count all of them
-    }
+    case Group(shapes @ _*) => shapes.map {
+      shape => height(shape)
+    }.max
   }
 }
 
