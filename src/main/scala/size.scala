@@ -19,7 +19,7 @@ object height {
     case Ellipse(r1, r2) => 1
     case Location(x, y, shape) => height(shape) + 1
     case Group(shapes @ _*) => shapes.map {
-      shape => height(shape)
+      shape => height(shape) + 1
     }.max
   }
 }

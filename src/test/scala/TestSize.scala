@@ -30,12 +30,12 @@ class TestHeight extends FunSuite {
     }
   }
 
-//  testHeight("simple ellipse", simpleEllipse, 1)
-//  testHeight("simple rectangle", simpleRectangle, 1)
-//  testHeight("simple location", simpleLocation, 2)
-//  testHeight("basic group", basicGroup, 2)
-//  testHeight("simple group", simpleGroup, 3)
-//  testHeight("complex group", complexGroup, 7)
+  testHeight("simple ellipse", simpleEllipse, 1)
+  testHeight("simple rectangle", simpleRectangle, 1)
+  testHeight("simple location", simpleLocation, 2)
+  testHeight("basic group", basicGroup, 2)
+  testHeight("simple group", simpleGroup, 3)
+  testHeight("complex group", complexGroup, 6)
 }
 
 class TestScale extends FunSuite {

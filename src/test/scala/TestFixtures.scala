@@ -16,10 +16,15 @@ object TestFixtures {
   val basicGroup = Group(Ellipse(50, 30), Rectangle(20, 40))
   val basicGroupScaled = Group(Ellipse(150, 90), Rectangle(60, 120))
 
-  val simpleGroup = Group(
-    Location(200, 100, Ellipse(50, 30)),
-  Location(400, 300, Rectangle(100, 50))
-  )
+  val simpleGroup =
+    Group(
+      Location(200, 100,
+        Ellipse(50, 30)
+      ),
+      Location(400, 300,
+        Rectangle(100, 50)
+      )
+    )
   val simpleGroupScaled = Group(
     Location(400, 200, Ellipse(100, 60)),
     Location(800, 600, Rectangle(200, 100))
